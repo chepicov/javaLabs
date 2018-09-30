@@ -2,10 +2,10 @@ package com.company;
 
 import java.util.Date;
 
-public class Yogurt extends MilkProduct {
-    private String taste;
-    private int volumeMl;
-    private int termination;
+public abstract class Yogurt extends MilkProduct {
+    protected String taste;
+    protected int volumeMl;
+    protected int termination;
 
     Yogurt() {}
 
@@ -29,7 +29,5 @@ public class Yogurt extends MilkProduct {
     }
 
     @Override
-    public void getManufacturer() {
-        System.out.println("Производитель йогурта: " + super.manufacturer);
-    }
+    public abstract void getManufacturer();
 }

@@ -10,11 +10,20 @@ public class WriterInfo {
     }
 
     public static void printYogurt(Yogurt product) {
-        System.out.println("\nЙогурт");
         WriterInfo.printProduct(product);
         System.out.println("Добавка: " + product.getTaste());
         System.out.println("Объем: " + product.getVolumeMl() + " мл");
         System.out.println("Терминированность: " + product.getTermination() + " °C");
+    }
+
+    public static void printDrinkingYogurt(DrinkingYogurt product) {
+        System.out.println("\nПитьевой йогурт");
+        WriterInfo.printYogurt(product);
+    }
+
+    public static void printGlassYogurt(GlassYogurt product) {
+        System.out.println("\nЙогурт в стаканчике");
+        WriterInfo.printYogurt(product);
     }
 
     public static void printCottageCheese(CottageCheese product) {

@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Date;
 
-public class MilkProduct {
+public abstract class MilkProduct implements MilkProductInterface {
     protected Date shelfLife;
     protected float protein;
     protected float fat;
@@ -29,7 +29,5 @@ public class MilkProduct {
         return fat;
     }
 
-    public void getManufacturer() {
-        System.out.println("Производитель: " + manufacturer);
-    }
+    public abstract void getManufacturer();
 }
